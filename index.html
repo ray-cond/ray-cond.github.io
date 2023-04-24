@@ -98,14 +98,27 @@
     <br>
     <div class="card">
         <img src="assets/teaser.png" class="img-fluid rounded mx-auto d-block">
+        <div class="row">
+            <div class="col-md-2">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input
+            </div>
+            <div class="col-md-4">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Novel
+                Views
+            </div>
+            <div class="col-md-6">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                Photoshop Blending
+            </div>
+        </div>
         <p style="margin: 10px; margin-bottom: 4px;">
             Ray conditioning enables photo-realistic multi-view image editing on natural photos via GAN inversion.
-            The left half shows headshots (first column) of four individuals and their corresponding synthesized results
-            from another viewpoint (second and third columns). The right half shows a portrait of two individuals (top
+            The left half shows headshots of four individuals and their corresponding synthesized results
+            from another viewpoint. The right half shows a portrait of two individuals (top
             row), the GAN inversion results of their faces (top row corners), and the resulting image (bottom row), in
             which their faces are replaced with synthesized faces looking in a different direction (bottom row corners).
-            To produce the latter, we used Photoshop to blend the synthesized faces with the original image.
-
         </p>
     </div>
 
@@ -119,7 +132,7 @@
 
     <!-- Paper section -->
     <div>
-        <hr>
+        <!-- <hr> -->
         <div class="row">
             <div class='col-md-3 col-sm-3 col-xs-12 text-center my-auto'>
                 <div class="row">
@@ -157,8 +170,19 @@
                 geometric models, outperforming related methods in both generation and inversion quality. This makes it
                 particularly well-suited for viewpoint editing in static images.
 
-
             </p>
+
+            <p class='h4 font-weight-bold '>Ray Conditioning</p>
+            <img src="assets/method.png" class="img-fluid rounded mx-auto d-block">
+            <p> Ray conditioning is a technique to condition an image generator on the
+                ray bundle of a camera for explicit viewpoint control. The method is simple.
+                Rather than using a 3D model, ray conditioning conditions each pixel in a generated image on a light
+                field prior, the set of all rays flowing through a scene. The spatial inductive bias of ray
+                conditioning
+                enables the image synthesizer to learn multi-view consistency from only single-view posed image
+                collections.
+            </p>
+
             <p class='h5 font-weight-bold '>Photo Collections as Unstructured Light Fields</p>
             <p>
                 The goal of ray conditioning can be described as follows. Imagine we have used a dense camera grid to
@@ -171,31 +195,31 @@
             </p>
         </div>
         <br>
-        <div class="row">
-            <p class='h4 font-weight-bold '>Ray Conditioning</p>
-            <img src="assets/method.png" class="img-fluid rounded mx-auto d-block">
-            <p> Ray conditioning is a technique to condition an image generator on the
-                ray bundle of a camera for explicit viewpoint control. The method is simple.
-                Rather than using a 3D model, ray conditioning conditions each pixel in a generated image on a light
-                field prior, the set of all rays flowing through a scene. The spatial inductive bias of ray conditioning
-                enables the image synthesizer to learn multi-view consistency from only single-view posed image
-                collections. By choosing a geometry-free approach, we relax the 3D photo-consistency constraints in
-                exchange for increased photo-realism.
-            </p>
-        </div>
 
         <br>
         <div class="row">
             <p class='h4 font-weight-bold '>Results </p>
+
+            <div>
+                <img src="assets/sample_results2.png" class="img-fluid rounded mx-auto d-block">
+                <p style="margin: 10px; margin-bottom: 4px;">
+                    Latent samples of humans and cats generated from ray conditioning. Ray conditioning enables a user
+                    to map images to set view points.
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
             Compared to methods such as EG3D which explicitly generate a 3D model, the results from ray conditioning are
             more photorealistic, and do not suffer from the geometry artifacts which may be present from 3D
             reconstruction.
 
-            For the individual below, we compare the quality of novel views from ray conditioning with PTI, and compare
-            it to
-            EG3D with HFGI3D. Ray conditioning synthesizes a more realistic nose, and more
-            life-like eyes.
+            For the individuals below, we use GAN inversion to create novel views. We compare the quality of novel views
+            from ray conditioning with PTI to the novel views from
+            EG3D with HFGI3D. Ray conditioning synthesizes more
+            life-like eyes and a more realistic nose.
         </div>
+
         <br>
         <div class="row text-center">
             <div class="col-md-6">
