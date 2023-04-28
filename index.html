@@ -100,7 +100,7 @@
         <img src="assets/teaser.png" class="img-fluid rounded mx-auto d-block">
         <div class="row">
             <div class="col-md-2">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input
             </div>
             <div class="col-md-4">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Novel
@@ -157,7 +157,8 @@
             </div>
         </div>
         <hr>
-        <div class="row">
+
+        <div class='col-md-15'>
             <p class='h4 font-weight-bold '>Introduction</p>
             <p>
                 For certain classes of images with shared canonical
@@ -174,18 +175,15 @@
 
             <p class='h4 font-weight-bold '>Ray Conditioning</p>
             <img src="assets/method.png" class="img-fluid rounded mx-auto d-block">
-            <p> Ray conditioning is a technique to condition an image generator on the
-                ray bundle of a camera for explicit viewpoint control. The method is simple.
-                Rather than using a 3D model, ray conditioning conditions each pixel in a generated image on a light
-                field prior, the set of all rays flowing through a scene. The spatial inductive bias of ray
-                conditioning
-                enables the image synthesizer to learn multi-view consistency from only single-view posed image
-                collections.
+            <p> Ray conditioning is a technique to condition an image generator on the ray bundle of a camera for
+                explicit viewpoint control. The spatial inductive bias of ray conditioning enables the image synthesizer
+                to learn multi-view
+                consistency from only single-view posed image collections.
             </p>
 
             <p class='h5 font-weight-bold '>Photo Collections as Unstructured Light Fields</p>
             <p>
-                The goal of ray conditioning can be described as follows. Imagine we have used a dense camera grid to
+                Imagine we have used a dense camera grid to
                 capture several light fields for
                 different subjects,
                 but then we accidentally lost access to all the images except only one randomly-chosen image per light
@@ -197,19 +195,19 @@
         <br>
 
         <br>
-        <div class="row">
+        <div class='col-md-15'>
             <p class='h4 font-weight-bold '>Results </p>
 
             <div>
                 <img src="assets/sample_results2.png" class="img-fluid rounded mx-auto d-block">
                 <p style="margin: 10px; margin-bottom: 4px;">
-                    Latent samples of humans and cats generated from ray conditioning. Ray conditioning enables a user
+                    Latent samples of humans and cats. Ray conditioning enables a user
                     to map images to set view points.
                 </p>
             </div>
         </div>
         <br>
-        <div class="row">
+        <div class='col-md-15'>
             Compared to methods such as EG3D which explicitly generate a 3D model, the results from ray conditioning are
             more photorealistic, and do not suffer from the geometry artifacts which may be present from 3D
             reconstruction.
@@ -253,14 +251,15 @@
             </div>
         </div>
         <br>
-        <div class="row">
+
+        <div class="col-md-15">
             <p>When trained on a multi-view dataset such as <a href="https://www.vincentsitzmann.com/srns">SRN Cars</a>,
                 ray conditioning is able to generate and render
                 view consistent videos at the cost of a 2D GAN. Results are pictured with a truncation of 0.6.
             </p>
         </div>
         <div class="text-center">
-            <video width="400" height="400" muted autoplay loop>
+            <video width="400" height="400" muted autoplay loop playsinline>
                 <source src=" assets/cars.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
