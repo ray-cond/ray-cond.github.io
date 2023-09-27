@@ -68,7 +68,7 @@
                 <p class="h6"> ICCV 2023
                 </p>
             </div>
-	</div>
+        </div>
 
         <!-- links -->
         <div class='row mb-4'>
@@ -181,7 +181,7 @@
                 consistency from only single-view posed image collections.
             </p>
 
-            <p class='h5 font-weight-bold '>Photo Collections as Unstructured Light Fields</p>
+            <!-- <p class='h5 font-weight-bold '>Photo Collections as Unstructured Light Fields</p>
             <p>
                 Imagine we have used a dense camera grid to
                 capture several light fields for
@@ -190,7 +190,7 @@
                 field. More specifically, we are left with an unstructured collection of light field observations from a
                 diverse set of scenes. The goal of our generative model is then to picture what those missing images may
                 have looked like.
-            </p>
+            </p> -->
         </div>
         <br>
 
@@ -263,6 +263,31 @@
                 <source src=" assets/cars.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+        </div>
+
+        <p class='h5 font-weight-bold '>Trading Photo-realism for Photo-consistency</p>
+        <p>
+            However, we find that the benefits of photo-realism do not come for free. Photo-realism often comes at the
+            expense of photo-consistency. For instance, with ray conditioning, when we try to generate smooth videos of
+            faces, we find that viewpoint is often entangled with expression. Aliasing also occurs in the hair and
+            teeth.
+            Ultimately, we believe that our work opens a new design space in 3D image generation. We hope that our
+            method can inspire new work in geometry-free image synthesis!
+        </p>
+        <div class="row">
+            <div class="col-md-6">
+                <video width="400" height="400" muted autoplay loop playsinline>
+                    <source src=" assets/red.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-md-6">
+                <video width="400" height="400" muted autoplay loop playsinline>
+                    <source src=" assets/yellow.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+            </div>
         </div>
 
 
