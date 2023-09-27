@@ -157,31 +157,39 @@
             </div>
         </div>
         <hr>
+        <p class='h4 font-weight-bold '>Explainer Video</p>
+        <p align="center">
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/S88qmycnOJA?si=fsc0HKoFPm20IdLv"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </p>
+    </div>
+    <div class='col-md-15'>
 
-        <div class='col-md-15'>
-            <p class='h4 font-weight-bold '>Introduction</p>
-            <p>
-                For certain classes of images with shared canonical
-                structure, e.g. faces, we observe that it is possible to achieve viewpoint control without optimizing
-                explicitly for 3D
-                structure. The result is a modified 2D GAN that offers precise control over generated viewpoints without
-                sacrificing photo-realism. Furthermore, we are able to train on data that does not contain multiple
-                viewpoints of any single subject, letting us leverage the same diverse and abundant data used for
-                regular GANs. Our method combines the photo-realism of existing GANs with the control offered by
-                geometric models, outperforming related methods in both generation and inversion quality. This makes it
-                particularly well-suited for viewpoint editing in static images.
+        <p class='h4 font-weight-bold '>Introduction</p>
+        <p>
+            For certain classes of images with shared canonical
+            structure, e.g. faces, we observe that it is possible to achieve viewpoint control without optimizing
+            explicitly for 3D
+            structure. The result is a modified 2D GAN that offers precise control over generated viewpoints without
+            sacrificing photo-realism. Furthermore, we are able to train on data that does not contain multiple
+            viewpoints of any single subject, letting us leverage the same diverse and abundant data used for
+            regular GANs. Our method combines the photo-realism of existing GANs with the control offered by
+            geometric models, outperforming related methods in both generation and inversion quality. This makes it
+            particularly well-suited for viewpoint editing in static images.
 
-            </p>
+        </p>
 
-            <p class='h4 font-weight-bold '>Ray Conditioning</p>
-            <img src="assets/method.jpg" class="img-fluid rounded mx-auto d-block">
-            <p> Ray conditioning is a technique to condition an image generator on the ray bundle of a camera for
-                explicit viewpoint control. The spatial inductive bias of ray conditioning enables the image synthesizer
-                to learn multi-view
-                consistency from only single-view posed image collections.
-            </p>
+        <p class='h4 font-weight-bold '>Ray Conditioning</p>
+        <img src="assets/method.jpg" class="img-fluid rounded mx-auto d-block">
+        <p> Ray conditioning is a technique to condition an image generator on the ray bundle of a camera for
+            explicit viewpoint control. The spatial inductive bias of ray conditioning enables the image synthesizer
+            to learn multi-view
+            consistency from only single-view posed image collections.
+        </p>
 
-            <!-- <p class='h5 font-weight-bold '>Photo Collections as Unstructured Light Fields</p>
+        <!-- <p class='h5 font-weight-bold '>Photo Collections as Unstructured Light Fields</p>
             <p>
                 Imagine we have used a dense camera grid to
                 capture several light fields for
@@ -191,131 +199,131 @@
                 diverse set of scenes. The goal of our generative model is then to picture what those missing images may
                 have looked like.
             </p> -->
-        </div>
-        <br>
+    </div>
+    <br>
 
-        <br>
-        <div class='col-md-15'>
-            <p class='h4 font-weight-bold '>Results </p>
+    <br>
+    <div class='col-md-15'>
+        <p class='h4 font-weight-bold '>Results </p>
 
-            <div>
-                <img src="assets/sample_results2.jpg" class="img-fluid rounded mx-auto d-block">
-                <p style="margin: 10px; margin-bottom: 4px;">
-                    Latent samples of humans and cats. Ray conditioning enables a user
-                    to map images to set view points.
-                </p>
-            </div>
-        </div>
-        <br>
-        <div class='col-md-15'>
-            Compared to methods such as EG3D which explicitly generate a 3D model, the results from ray conditioning are
-            more photorealistic, and do not suffer from the geometry artifacts which may be present from 3D
-            reconstruction.
-
-            For the individuals below, we use GAN inversion to create novel views. We compare the quality of novel views
-            from ray conditioning with PTI to the novel views from
-            EG3D with HFGI3D. Ray conditioning synthesizes more
-            life-like eyes and a more realistic nose.
-        </div>
-
-        <br>
-        <div class="row text-center">
-            <div class="col-md-6">
-                Ray Conditioning + <a href=https://github.com/danielroich/PTI>PTI</a>
-            </div>
-            <div class="col-md-6">
-                <a href=https://nvlabs.github.io/eg3d>EG3D</a> + <a
-                    href=https://ken-ouyang.github.io/HFGI3D/index.html>HFGI3D</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <img src="assets/00175_raycond_full.jpg" class="img-fluid rounded">
-            </div>
-            <div class="col-md-6">
-                <img src="assets/00175_hfgi3d_full.jpg" class="img-fluid rounded">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input
-            </div>
-            <div class="col-md-4">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Novel Views
-            </div>
-            <div class="col-md-2">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input
-            </div>
-            <div class="col-md-4">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Novel Views
-            </div>
-        </div>
-        <br>
-
-        <div class="col-md-15">
-            <p>When trained on a multi-view dataset such as <a href="https://www.vincentsitzmann.com/srns">SRN Cars</a>,
-                ray conditioning is able to generate and render
-                view consistent videos at the cost of a 2D GAN. Results are pictured with a truncation of 0.6.
+        <div>
+            <img src="assets/sample_results2.jpg" class="img-fluid rounded mx-auto d-block">
+            <p style="margin: 10px; margin-bottom: 4px;">
+                Latent samples of humans and cats. Ray conditioning enables a user
+                to map images to set view points.
             </p>
         </div>
-        <div class="text-center">
+    </div>
+    <br>
+    <div class='col-md-15'>
+        Compared to methods such as EG3D which explicitly generate a 3D model, the results from ray conditioning are
+        more photorealistic, and do not suffer from the geometry artifacts which may be present from 3D
+        reconstruction.
+
+        For the individuals below, we use GAN inversion to create novel views. We compare the quality of novel views
+        from ray conditioning with PTI to the novel views from
+        EG3D with HFGI3D. Ray conditioning synthesizes more
+        life-like eyes and a more realistic nose.
+    </div>
+
+    <br>
+    <div class="row text-center">
+        <div class="col-md-6">
+            Ray Conditioning + <a href=https://github.com/danielroich/PTI>PTI</a>
+        </div>
+        <div class="col-md-6">
+            <a href=https://nvlabs.github.io/eg3d>EG3D</a> + <a
+                href=https://ken-ouyang.github.io/HFGI3D/index.html>HFGI3D</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="assets/00175_raycond_full.jpg" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+            <img src="assets/00175_hfgi3d_full.jpg" class="img-fluid rounded">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input
+        </div>
+        <div class="col-md-4">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Novel Views
+        </div>
+        <div class="col-md-2">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input
+        </div>
+        <div class="col-md-4">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Novel Views
+        </div>
+    </div>
+    <br>
+
+    <div class="col-md-15">
+        <p>When trained on a multi-view dataset such as <a href="https://www.vincentsitzmann.com/srns">SRN Cars</a>,
+            ray conditioning is able to generate and render
+            view consistent videos at the cost of a 2D GAN. Results are pictured with a truncation of 0.6.
+        </p>
+    </div>
+    <div class="text-center">
+        <video width="400" height="400" muted autoplay loop playsinline>
+            <source src=" assets/cars.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <p class='h5 font-weight-bold '>Trading Photo-realism for Photo-consistency</p>
+    <p>
+        However, we find that the benefits of photo-realism do not come for free. Photo-realism often comes at the
+        expense of photo-consistency. For instance, with ray conditioning, when we try to generate smooth videos of
+        faces, we find that viewpoint is often entangled with expression. Aliasing also occurs in the hair and
+        teeth.
+        Ultimately, we believe that our work opens a new design space in 3D image generation. We hope that our
+        method can inspire new work in geometry-free image synthesis!
+    </p>
+    <div class="row text-center">
+        <div class="col-md-6">
             <video width="400" height="400" muted autoplay loop playsinline>
-                <source src=" assets/cars.mp4" type="video/mp4">
+                <source src=" assets/red.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
+        <div class="col-md-6">
+            <video width="400" height="400" muted autoplay loop playsinline>
+                <source src=" assets/yellow.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
 
-        <p class='h5 font-weight-bold '>Trading Photo-realism for Photo-consistency</p>
-        <p>
-            However, we find that the benefits of photo-realism do not come for free. Photo-realism often comes at the
-            expense of photo-consistency. For instance, with ray conditioning, when we try to generate smooth videos of
-            faces, we find that viewpoint is often entangled with expression. Aliasing also occurs in the hair and
-            teeth.
-            Ultimately, we believe that our work opens a new design space in 3D image generation. We hope that our
-            method can inspire new work in geometry-free image synthesis!
-        </p>
-        <div class="row">
-            <div class="col-md-6">
-                <video width="400" height="400" muted autoplay loop playsinline>
-                    <source src=" assets/red.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="col-md-6">
-                <video width="400" height="400" muted autoplay loop playsinline>
-                    <source src=" assets/yellow.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+        </div>
+    </div>
 
+
+    <div>
+        <hr>
+        <div class='row'>
+            <div class='col-md-12 col-sm-12 col-xs-12'>
+                <p class='h4 font-weight-bold'>Acknowledgements</p>
+                <p style='line-height:1;'>
+                    We thank Noah Snavely for helpful discussions, and the authors of EG3D and HFGI3D for kindly
+                    sharing
+                    datasets with us.
+                </p>
             </div>
         </div>
-
-
-        <div>
-            <hr>
-            <div class='row'>
-                <div class='col-md-12 col-sm-12 col-xs-12'>
-                    <p class='h4 font-weight-bold'>Acknowledgements</p>
-                    <p style='line-height:1;'>
-                        We thank Noah Snavely for helpful discussions, and the authors of EG3D and HFGI3D for kindly
-                        sharing
-                        datasets with us.
-                    </p>
-                </div>
-            </div>
-            <hr>
-            <div class='row'>
-                <div class='col-md-12 col-sm-12 col-xs-12'>
-                    <p class='h4 font-weight-bold '>Citation</p>
-                    <pre><code>@inproceedings{chen2023:ray-conditioning,
+        <hr>
+        <div class='row'>
+            <div class='col-md-12 col-sm-12 col-xs-12'>
+                <p class='h4 font-weight-bold '>Citation</p>
+                <pre><code>@inproceedings{chen2023:ray-conditioning,
   author = {Eric Ming Chen and Sidhanth Holalkere and Ruyu Yan and Kai Zhang and Abe Davis},
   title = {Ray Conditioning: Trading Photo-realism for Photo-Consistency in Multi-view Image Generation},
   booktitle = {ICCV},
   year = {2023}
 }</code></pre>
-                </div>
             </div>
         </div>
+    </div>
 
 </body>
 
